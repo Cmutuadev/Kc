@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/cc/BOT/admin/get_error_logs.py", line 24, in cmd_geterror
+    await message.reply_document(document=document, reply_to_message_id=message.id)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/pyrogram/types/messages_and_media/message.py", line 1601, in reply_document
+    return await self._client.send_document(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/pyrogram/methods/messages/send_document.py", line 163, in send_document
+    file = await self.save_file(document, progress=progress, progress_args=progress_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/pyrogram/methods/advanced/save_file.py", line 129, in save_file
+    raise ValueError("File size equals to 0 B")
+ValueError: File size equals to 0 B
+
