@@ -18,3 +18,5 @@ fake-useragent==0.1.11
 colorama
 faker
 countryinfo
+flask
+
