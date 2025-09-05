@@ -5,9 +5,6 @@ import html
 import json
 from urllib.parse import urlparse, parse_qs
 
-# Remove the global session initialization; pass it as argument instead
-# session = requests.Session()  # Now passed in function arguments
-
 async def create_cvv_charge(fullz, session):
     try:
         cc, mes, ano, cvv = fullz.split("|")
