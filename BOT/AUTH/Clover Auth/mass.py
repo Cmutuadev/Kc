@@ -38,7 +38,7 @@ async def mchkfunc(fullcc, user_id):
                 return f"<code>{fullcc}</code>\n<b>Result - DECLINED ❌</b>\n"
 
 
-@Client.on_message(filters.command("mchk", [".", "/"]))
+@Client.on_message(filters.command("mcl", [".", "/"]))
 def multi(Client, message):
     t1 = threading.Thread(target=bcall, args=(Client, message))
     t1.start()
@@ -67,7 +67,7 @@ async def stripe_mass_auth_cmd(Client, message):
 
         ccs = getcc[1]
         resp = f"""
-- 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 -  B3 Auth💎
+- 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 -  Clover Auth💎
 
 - 𝐂𝐂 𝐀𝐦𝐨𝐮𝐧𝐭 -{len(ccs)}
 - 𝐂𝐡𝐞𝐜𝐤𝐞𝗱 - Checking CC For {first_name}
@@ -77,7 +77,7 @@ async def stripe_mass_auth_cmd(Client, message):
         nov = await message.reply_text(resp, message.id)
 
         text = f"""
-<b>↯ B3 Auth [/mchk]
+<b>↯ Clover Auth [/mcl]
 
 Number Of CC Check : [{len(ccs)}]
 </b>\n
@@ -105,7 +105,7 @@ Number Of CC Check : [{len(ccs)}]
                 currency = getbin[6] if len(getbin) > 6 else "Unknown"
 
                 proxy_status = "Live ✨"
-                gateway = "B3 Auth"
+                gateway = "Clover Auth"
                 bin6 = fullcc[:6]
 
                 # Extract status and response from result_text
