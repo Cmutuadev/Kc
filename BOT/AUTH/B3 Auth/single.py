@@ -25,7 +25,7 @@ async def stripe_auth_cmd(Client, message):
         user_id = str(message.from_user.id)
         checkall = await check_all_thing(Client, message)
 
-        gateway = "B3  Auth"
+        gateway = "Braintree Auth 3💎"
 
         if checkall[0] == False:
             return
@@ -148,3 +148,4 @@ Usage: /chk cc|mes|ano|cvv</b>"""
     except Exception:
         import traceback
         await error_log(traceback.format_exc())
+
